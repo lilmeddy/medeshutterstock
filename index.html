@@ -9,16 +9,36 @@
 </head>
 <body>
     <main>
-   <h1 id="mede"></h1>
+        <h1 id="hour"></h1>
+        <h1 id="min"></h1>
+   <h1 id="sec"></h1>
     </main>
 </body>
 </html>
 <script>
+    let date = new Date()
+    // let date = new Date()
+    document.getElementById("hour").innerHTML = date.getHours();
+        document.getElementById("min").innerHTML = date.getMinutes();
      setInterval(()=>{
         let date = new Date()
-        // let med =   date.getSeconds()
-        document.getElementById("mede").innerHTML = date.getSeconds();
+        document.getElementById("sec").innerHTML = date.getSeconds();
         date++;
   
-    },1000) 
+    },1000)
+    setInterval(()=>{
+        let date = new Date()
+        document.getElementById("min").innerHTML = date.getMinutes();
+        date++;
+  
+    },12000)
+    setInterval(()=>{
+        let date = new Date()
+        document.getElementById("hour").innerHTML = date.getHours();
+        date++;
+  
+    },18000)
+    // if (   document.getElementById("mede").innerHTML === 59) {
+        
+    // }
 </script>
