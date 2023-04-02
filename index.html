@@ -9,10 +9,33 @@
   </head>
   <body>
     <main>
-      
+      <h1>
+        <span id="hrr"></span>
+        <!-- <span>:</span> -->
+        <span id="min"></span>
+        <!-- <span>:</span> -->
+        <span id="sec"></span>
+      </h1>
+      <input type="number" name="" id="myHour">
+      <input type="number" name="" id="myMin">
+      <p id="show">Alarm time shows here</p>
+      <button onclick="myAlarm()">Set Alarm</button>
     </main>
   </body>
 </html>
 <script>
- 
+  let myHour = document.getElementById("myHour")
+  let myMin = document.getElementById("myMin")
+function myAlarm(){
+  document.getElementById("show").innerHTML = "An Alarm has been set to " +myHour.value +":" +myMin.value
+}
+ setInterval(()=>{
+  let date = new Date()
+  document.getElementById("hrr").innerHTML = date.getHours()
+  document.getElementById("min").innerHTML = date.getMinutes()
+  document.getElementById("sec").innerHTML = date.getSeconds()
+  if (myHour.value == date.getHours() && myMin.value ==date.getMinutes()){
+    document.getElementById("show").innerHTML = "Alarm Ringing"
+  }
+ },1000)
 </script>
