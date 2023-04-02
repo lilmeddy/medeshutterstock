@@ -11,9 +11,9 @@
     <main>
       <h1>
         <span id="hrr"></span>
-        <!-- <span>:</span> -->
+        <!-- <span id="col"></span> -->
         <span id="min"></span>
-        <!-- <span>:</span> -->
+        <!-- <span id="cok"></span> -->
         <span id="sec"></span>
       </h1>
       <input type="number" name="" id="myHour">
@@ -26,16 +26,18 @@
 <script>
   let myHour = document.getElementById("myHour")
   let myMin = document.getElementById("myMin")
-function myAlarm(){
-  document.getElementById("show").innerHTML = "An Alarm has been set to " +myHour.value +":" +myMin.value
-}
  setInterval(()=>{
   let date = new Date()
   document.getElementById("hrr").innerHTML = date.getHours()
+  // document.getElementById("col").innerHTML = " : "
   document.getElementById("min").innerHTML = date.getMinutes()
+  // document.getElementById("cok").innerHTML = " : "
   document.getElementById("sec").innerHTML = date.getSeconds()
   if (myHour.value == date.getHours() && myMin.value ==date.getMinutes()){
     document.getElementById("show").innerHTML = "Alarm Ringing"
   }
  },1000)
+ function myAlarm(){
+  document.getElementById("show").innerHTML = "An Alarm has been set to " +myHour.value +":" +myMin.value
+}
 </script>
