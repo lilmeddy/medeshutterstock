@@ -12,12 +12,52 @@ body{
     justify-content: center;
 }
 main{
-    width: 40%;
-    height: 300px;
+    width: 30%;
+    height: 280px;
     background-color: #fff;
     box-shadow: 2px 4px 4px 2px rgba(0,0,0,0.5);
     border-radius: 10px;
 }
+.big{
+    width: 98.5%;
+    height: 98.5%;
+    border-radius: 10px;
+    border:1px solid blue;
+   margin:1.5px auto;
+   text-align: center;
+}
 h1{
+    margin-top: 40px;
+    margin-bottom: 15px;
     text-align: center;
+}
+/* span{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: blue;
+    box-shadow: 2px 2px rgba(0,0,0,0.5);
+} */
+input{
+    width: 53px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 0.5px solid blue;
+    outline: none;
+}
+p{
+    margin-bottom: 15px;
+}
+button{
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: blue;
+    color: #fff;
+    box-shadow: 2px 2px rgba(0,0,0,0.5);
+    font-size: 15px;
 }
